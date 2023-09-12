@@ -2,7 +2,7 @@
 
 import qrcode
  
-data = "GeeksforGeeks"
+data = "imnotageek"
 
 qr = qrcode.QRCode(version = 1,
                    box_size = 10,
