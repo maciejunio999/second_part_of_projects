@@ -1,0 +1,20 @@
+ping pong game
+like bad in the days people used to play this game in arcade i made one myself
+the concept is pretty easy two people paly ping pong, they use arrows or 'wsad' (keys) to move paddles and the ball moves itself
+before we start a game we can chose how many points does a person need to be called winner, afters we click play new window appares and the game starts
+ball bounces off paddles and top, bottom edges, if playes paddle misses ball his opponent gains a point
+
+in order for this game to work and also beeing able to chose how many points we need to win i mage diferent function, called 'ping_pong', it gets called when we click 'Start'
+
+start window was made using tkinter and includes some labels and choosing manu
+this window is closed in mainloop, because there is no reason to close it after game ends, this way when players finish game they can start next one
+
+whole ping_pong function takes care of gameplay, also we make turtle window there, why turtle? i use this library to draw all objects (ball, paddles)
+when we call this function it makes wndow and places all objects within it
+
+to make paddlez move we had to make diferent functions, because we want them to move on certain event in certian direction,
+thats what for all paddle_a_up, paddle_b_down etc functions are for
+
+we make call move by udating her coordinates thats why we set dy and dx (line 46-47), it all changes in while loop a bit further in code
+
+in while loop i made ball move a bit more random, so it maybe be a bit more interesting, so ball can move in slightly diferent direction, with a bit different speed
