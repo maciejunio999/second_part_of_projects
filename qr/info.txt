@@ -1,0 +1,2 @@
+some tries to make qr code generator, it came out a bit to easy so thats all
+if i remember it right at some point coloring didn't work
