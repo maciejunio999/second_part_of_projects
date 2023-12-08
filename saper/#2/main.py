@@ -1,5 +1,4 @@
-from tkinter import *
-import tkinter
+import tkinter as tk
 import random
 
 h = 5
@@ -75,22 +74,22 @@ class Board:
 
         return True
 
-root = Tk()
+root = tk.Tk()
 root.geometry("500x500")
 
-frame=Frame(root)
+frame = tk.Frame(root)
 
-Grid.rowconfigure(root, 0, weight=1)
-Grid.columnconfigure(root, 0, weight=1)
+tk.Grid.rowconfigure(root, 0, weight=1)
+tk.Grid.columnconfigure(root, 0, weight=1)
 
-frame.grid(row=0, column=0, sticky=N+S+E+W)
+frame.grid(row=0, column=0, sticky=tk.N+tk.S+tk.E+tk.W)
 
-grid=Frame(frame)
+grid = tk.Frame(frame)
 
-grid.grid(sticky=N+S+E+W, column=0, row=7, columnspan=2)
+grid.grid(sticky=tk.N+tk.S+tk.E+tk.W, column=0, row=7, columnspan=2)
 
-Grid.rowconfigure(frame, 7, weight=1)
-Grid.columnconfigure(frame, 0, weight=1)
+tk.Grid.rowconfigure(frame, 7, weight=1)
+tk.Grid.columnconfigure(frame, 0, weight=1)
 
 not_clicked="black"
 active="red"
@@ -98,14 +97,23 @@ default_color="white"
 
 
 def main(list_of_board, board_object):
-  width = len(list_of_board)
-  height = len(list_of_board[0])
-  for x in range(height):
-    for y in range(width):
-      btn = tkinter.Button(frame, bg=not_clicked)
-      btn.grid(column=y, row=x, sticky=N+S+E+W)
-      btn["text"] = list_of_board[x][y]
-      btn["command"] = lambda btn=btn, x=x, y=y: click(btn, x, y, board_object)
+    width = len(list_of_board)
+    height = len(list_of_board[0])
+    
+    for x in range(height):
+        for y in range(width):
+            btn = tk.Button(frame, bg=not_clicked)
+            btn.grid(column=y, row=x, sticky=tk.N+tk.S+tk.E+tk.W)
+            btn["text"] = list_of_board[x][y]
+            btn["command"] = lambda btn=btn, x=x, y=y: click(btn, x, y, board_object)
+            
+    for x in range(width):
+        tk.Grid.columnconfigure(frame, x, weight=1)
+        
+    for y in range(height):
+        tk.Grid.rowconfigure(frame, y, weight=1)
+        
+    return frame
 
   for x in range(width):
     Grid.columnconfigure(frame, x, weight=1)
@@ -129,5 +137,5 @@ def click(clicked_button, x, y, board_object):
 if __name__ == '__main__':
     board = Board(h, w)
     main(board.board, board)
-    tkinter.mainloop()
+    tk.mainloop()
 
