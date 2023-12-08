@@ -1,0 +1,49 @@
+Purpose:
+
+This Python code implements a graphical Minesweeper game using the Tkinter library. It consists of a menu function that creates a menu window and a main function that creates a game window and plays the game.
+
+Classes:
+
+    Board:
+        Represents a Minesweeper board.
+        Attributes:
+            dim_size: The dimensions of the board (number of rows and columns).
+            num_bombs: The number of bombs on the board.
+            board: A 2D list representing the board cells.
+            dug: A set of (row, col) tuples representing the cells that have been dug.
+        Methods:
+            make_new_board(): Generates a new board with random bomb placements.
+            assign_values_to_board(): Assigns values to the board based on bomb placements.
+            get_num_neighboring_bombs(row, col): Returns the number of bombs adjacent to the cell at (row, col).
+            dig(row, col, roo): Attempts to dig at the cell at (row, col) and updates the board accordingly.
+
+Functions:
+
+    main(buttons, b, bb): Creates a window to play the game.
+        Parameters:
+            buttons: A dictionary of buttons on the game board.
+            b: The board of the game.
+            bb: The instance of the Board class.
+        Returns: The frame containing the game board.
+    menu(): Creates a menu window to select the size of the board and the number of bombs.
+        Returns: None.
+
+Variables:
+
+    not_clicked: The default color for unclicked cells.
+    active: The color for cells that have been flagged as bombs.
+    default_color: The color for cells that have been dug and do not contain bombs.
+
+Main Program:
+
+The main program creates a menu window using the menu() function and then starts the game using the main() function.
+
+User Interface:
+
+The game window displays a grid of buttons, each representing a cell on the game board. Clicking a button flags the corresponding cell as revealed. If the cell contains a bomb, the game is over. If the cell does not contain a bomb, the button is updated to display the number of bombs adjacent to the cell.
+
+Additional Notes:
+
+    The game uses the Tkinter library for graphical user interface (GUI) development.
+    The game uses random numbers to generate the placement of bombs.
+    The game does not support undo or multiple game modes.
