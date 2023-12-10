@@ -1,6 +1,8 @@
 Purpose:
 
-This Python code implements a graphical Minesweeper game using the Tkinter library. It creates a game window with a grid of buttons, each representing a cell on the game board. Clicking a button reveals the corresponding cell. If the cell contains a bomb, the game is over and the window is closed. If the cell does not contain a bomb, the button is updated to display the number of bombs adjacent to the cell.
+    This Python code implements a graphical Minesweeper game using the Tkinter library. It creates a game window with a grid of buttons, each representing a cell on the game board.
+    Clicking a button reveals the corresponding cell. If the cell contains a bomb, the game is over and the window is closed. If the cell does not contain a bomb, the button is updated to display
+    the number of bombs adjacent to the cell.
 
 Classes:
 
