@@ -1,0 +1,27 @@
+Purpose:
+
+  This Python code creates a simple window with a title "Dates" and three frames: upper, mid, and bottom. It also creates two buttons, "Start" and "Stop", and two labels,
+  "Start time" and "Stop time". The "Start" button starts the timer and updates the "Start time" label with the current time. The "Stop" button stops the timer and updates
+  the "Stop time" label with the current time, distinguishing between different days if they occur.
+
+Functions:
+
+    start_time():
+        Starts the timer using the datetime.datetime.now() function.
+        Updates the "Start time" label with the current time.
+        Clears the "Stop time" label.
+    stop_time():
+        Stops the timer using the datetime.datetime.now() function.
+        Updates the "Stop time" label with the current time.
+        If the current day is different from the start time day, updates the "Start time" label with the start time and the "Stop time" label with the stop time and the current day.
+
+Variables:
+
+    start: A datetime.datetime object that stores the start time.
+    stop: A datetime.datetime object that stores the stop time.
+
+Additional Notes:
+
+    The code uses the Tkinter library to create the window and buttons.
+    The code uses the datetime library to handle time calculations.
+    The code distinguishes between different days by comparing the date() attributes of the start and stop objects.
