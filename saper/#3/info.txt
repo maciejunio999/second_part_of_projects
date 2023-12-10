@@ -1,0 +1,40 @@
+Purpose:
+
+This Python code implements a graphical Minesweeper game using the Tkinter library. It creates a game window with a grid of buttons, each representing a cell on the game board. Clicking a button reveals the corresponding cell. If the cell contains a bomb, the game is over and the window is closed. If the cell does not contain a bomb, the button is updated to display the number of bombs adjacent to the cell.
+
+Classes:
+
+    Board: Represents a Minesweeper board.
+      Attributes:
+        - dim_size: The dimensions of the board (number of rows and columns).
+        - num_bombs: The number of bombs on the board.
+        - board: A 2D list representing the board cells.
+        - dug: A set of (row, col) tuples representing the cells that have been dug.
+      Methods:
+        - make_new_board(): Generates a new board with random bomb placements.
+        - assign_values_to_board(): Assigns values to the board based on bomb placements.
+        - get_num_neighboring_bombs(row, col): Returns the number of bombs adjacent to the cell at (row, col).
+        - dig(row, col): Attempts to dig at the cell at (row, col) and updates the board accordingly.
+
+Functions:
+
+    main(buttons, board, bb): Creates a window to play the game.
+      Parameters:
+        - buttons: A dictionary mapping button IDs to button objects.
+        - board: A 2D list representing the board of the game.
+        - bb: The instance of the Board class.
+      Returns: The frame containing the game board.
+
+Changes:
+
+  The dim_size and num_bombs parameters for the Board constructor are now assigned values explicitly (instead of using default values).
+  The not_clicked and active variables are now initialized to "black" and "red", respectively (instead of assigning them using separate statements).
+  The default_color variable is now initialized to "white" (instead of assigning it using a separate statement).
+  The main() function now takes a `list_of_board` parameter instead of directly accessing the `board` attribute of the `board_object`.
+  The `click()` function now takes the `clicked_button` parameter as an additional argument.
+
+Additional Notes:
+
+The game uses the Tkinter library for graphical user interface (GUI) development.
+The game uses random numbers to generate the placement of bombs.
+The game does not support undo or multiple game modes.
