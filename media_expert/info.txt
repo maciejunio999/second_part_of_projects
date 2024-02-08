@@ -1,0 +1,12 @@
+    there is always something like when You buy 3 products, You get third cheeper or something
+    this time my dad came and said i should find the best option, so ...
+    this time there was somethng like:
+        when You buy products You can get second 30% off or third 55% off or fourth 80% off
+        or fifth for 0,01 zł
+    
+    this code should be able to find the best option
+
+    example:
+        input = {'TV': 3000, 'sink': 350, 'computer': 4500}
+        output = 2
+        explanation: the best option is to get discount on second product it is 30% off
